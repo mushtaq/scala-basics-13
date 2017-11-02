@@ -19,6 +19,10 @@ def product(xs: List[Int]): Int = fold(xs, 1)((x, y) ⇒ x * y)
 
 def stringify(xs: List[Int]): String = fold(xs, "")((x, y) ⇒ x + y)
 
+def map(xs: List[Int], f: Int ⇒ Int): List[Int] =
+  fold(xs, List.empty[Int])((acc, elm) ⇒ f(elm) :: acc).reverse
+
 sum(List(1, 2, 3, 4))
 product(List(1, 2, 3, 4))
 stringify(List(1, 2, 3, 4))
+map(List(1, 2, 3, 4), x ⇒ x * x)

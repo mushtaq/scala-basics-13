@@ -1,4 +1,5 @@
 
+List.empty[Int]
 
 def map(xs: List[Int], f: Int ⇒ Int): List[Int] = {
   var result: List[Int] = Nil

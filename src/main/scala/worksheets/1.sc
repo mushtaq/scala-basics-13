@@ -20,3 +20,7 @@ val buf = mutable.Buffer.empty[Int]
 buf += 10
 
 buf.toList
+
+12
+
+111
