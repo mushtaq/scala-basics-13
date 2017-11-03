@@ -12,7 +12,7 @@ def map2(xs: List[Int], f: Int ⇒ Int): List[Int] = {
   @tailrec
   def inner(remaining: List[Int], acc: List[Int]): List[Int] = {
     if(remaining.isEmpty) acc.reverse
-    \else inner(remaining.tail, f(remaining.head) :: acc)
+    else inner(remaining.tail, f(remaining.head) :: acc)
   }
 
   inner(xs, Nil)
