@@ -11,6 +11,10 @@ def fold[A, B](xs: List[A], seed: B)(op: (B, A) ⇒ B): B = {
   result
 }
 
+def fold2[A, B](xs: List[A], acc: B)(op: (B, A) ⇒ B): B = {
+  if(xs.isEmpty) acc else fold2(xs.tail, op(acc, xs.head))(op)
+}
+
 def add(a: Int, b: Int) = a + b
 
 def sum(xs: List[Int]): Int = fold(xs, 0)(add)
