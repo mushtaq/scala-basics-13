@@ -9,7 +9,7 @@ case class Person(name: String, age: Int) {
   def grow(by: Int): Person = copy(age = age + by)
 }
 
-val person1 = new Person("mushtaq", 53)
+val person1: Person = Person("mushtaq", 53)
 val person2 = new Person("mushtaq", 53)
 
 val person1U = person1.grow(11)
